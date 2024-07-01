@@ -7,7 +7,7 @@ const Card = ({ data }: { data: Photo }) => {
   const router = useRouter();
   const { active } = useAppSelector((state) => state.images);
   const dispatch = useAppDispatch();
-  const activeClass = active === data.index ? "border border-red-200" : "";
+  const activeClass = active === data.index ? "border border-red-400" : "";
 
   const handleOnClick = () => {
     dispatch(SET_ACTIVE({ index: data.index }));
@@ -15,7 +15,7 @@ const Card = ({ data }: { data: Photo }) => {
   };
   return (
     <div
-      className={`cursor-pointer shadow-sm rounded-md p-3 sm:p-4  w-full fade-in transition ease-in-out delay-150   hover:scale-105 ${activeClass}`}
+      className={`cursor-pointer shadow-md rounded-md p-3 sm:p-4  w-full fade-in  transition ease-in-out delay-150   hover:scale-105 ${activeClass}`}
       onClick={handleOnClick}
     >
       <div className="  flex space-x-4">
