@@ -26,7 +26,7 @@ const ItemPage = ({ index }: { index: number }) => {
   };
 
   return (
-    <section className="container mx-auto px-4 max-w-screen-sm">
+    <section className="container text-black mx-auto px-4 max-w-screen-sm">
       {activeItem ? (
         <div
           className={`shadow-sm rounded-md p-3 sm:p-4  w-full fade-in transition ease-in-out delay-50  `}

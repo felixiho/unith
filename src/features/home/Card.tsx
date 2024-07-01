@@ -35,10 +35,10 @@ const Card = ({ data }: { data: Photo }) => {
           <div className="space-y-3">
             <div className="grid gap-1">
               <div className=" rounded col-span-1">
-                <p className="text-sm">{data.title}</p>
+                <p className="text-sm text-black">{data.title}</p>
               </div>
               <div className="  rounded col-span-2">
-                <p className="text-sm ">{data.description}</p>
+                <p className="text-sm  text-black">{data.description}</p>
               </div>
             </div>
           </div>
