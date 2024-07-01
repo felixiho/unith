@@ -11,7 +11,7 @@ const Card = ({ data }: { data: Photo }) => {
 
   const handleOnClick = () => {
     dispatch(SET_ACTIVE({ index: data.index }));
-    router.push(`/item/${data.index}`);
+    router.push(`/${data.index}/item`);
   };
   return (
     <div
