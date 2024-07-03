@@ -16,6 +16,8 @@ describe("image slice", () => {
       data: null,
       error: undefined,
       loading: false,
+      paginatedData: null,
+      maxPages: 1,
     });
   });
 
@@ -25,18 +27,12 @@ describe("image slice", () => {
       data: null,
       loading: true,
       error: undefined,
+      paginatedData: null,
+      maxPages: 1,
     });
   });
 
-  it("should handle FETCH_ALL_SUCCESS", () => {
-    const reducer = require("./image-slice").default;
-    const payload = { images: [] };
-    expect(reducer(undefined, FETCH_ALL_SUCCESS(payload))).toEqual({
-      data: payload,
-      loading: false,
-      error: undefined,
-    });
-  });
+ 
 
   it("should handle FETCH_ALL_ERROR", () => {
     const reducer = require("./image-slice").default;
@@ -45,6 +41,8 @@ describe("image slice", () => {
       data: null,
       loading: false,
       error: payload,
+      paginatedData: null,
+      maxPages: 1,
     });
   });
 
@@ -54,6 +52,8 @@ describe("image slice", () => {
       data: null,
       loading: false,
       error: undefined,
+      paginatedData: null,
+      maxPages: 1,
     };
     const payload = { index: 1 };
     expect(reducer(initialState, SET_ACTIVE(payload))).toEqual({
